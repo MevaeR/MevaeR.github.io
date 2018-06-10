@@ -1,3 +1,10 @@
+## What is reinforcement learning
+### Principe
+<img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="hi" class="inline"/>
+From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
+
+### Markov decision Process
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/MevaeR/MevaeR.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
