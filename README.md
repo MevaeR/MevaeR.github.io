@@ -1,6 +1,8 @@
 ## What is reinforcement learning
 ### Principe
-<img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="hi" class="inline"/>
+
+![Principe](https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png "Principe")
+
 From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
 
 ### Markov decision Process
