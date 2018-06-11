@@ -8,7 +8,9 @@
 
 From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
 
-### Markov decision Process
+### Markov Decision Process
+
+>Life is a Markov Decision Process.
 
 ### Q-Learning
 
