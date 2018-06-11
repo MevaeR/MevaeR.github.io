@@ -1,4 +1,6 @@
-## What is reinforcement learning
+## AI Pacman (Reinforcement learning)
+
+![pacman_gif](http://ai.berkeley.edu/images/pacman_game.gif)
 
 ### Principe
 
