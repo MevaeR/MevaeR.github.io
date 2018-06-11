@@ -14,7 +14,16 @@ From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demysti
 
 ### Q-Learning
 
+Avantage/ incovénient Q-Learning
+
 ### Approximate Q-Learning
+
+Avantage/incovénients
+
+### Application Réseaux de neurones
+
+Intérêt du RN.
+
 
 ## Welcome to GitHub Pages
 
