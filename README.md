@@ -3,9 +3,7 @@ $$a^2 + b^2 = c^2$$
 
 
 ## AI Pacman (Reinforcement learning)
-<p align="center">
-![pacman_gif]((http://ai.berkeley.edu/images/pacman_game.gif))
-</p>
+
 ![pacman_gif](http://ai.berkeley.edu/images/pacman_game.gif)
 
 ### Introduction
