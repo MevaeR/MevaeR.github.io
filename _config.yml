@@ -1,7 +1,9 @@
+markdown: redcarpet
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 theme: jekyll-theme-cayman
 title: Welcome to the Bruji's homepage !
 description: It's a blog about reinforcement learning. We learn how to implement an agent to play Pacman.
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+
