@@ -1,3 +1,4 @@
+markdown: kramdown
 theme: jekyll-theme-cayman
 title: Welcome to the Bruji's homepage !
 description: It's a blog about reinforcement learning. We learn how to implement an agent to play Pacman.
