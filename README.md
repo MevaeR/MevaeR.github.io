@@ -1,3 +1,10 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+$$a^2 + b^2 = c^2$$
+
+
 ## AI Pacman (Reinforcement learning)
 
 ![pacman_gif](http://ai.berkeley.edu/images/pacman_game.gif)
