@@ -2,7 +2,6 @@
 
 ![pacman_gif](http://ai.berkeley.edu/images/pacman_game.gif)
 
-
 ### Principe
 
 ![Principe](https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png "Principe")
