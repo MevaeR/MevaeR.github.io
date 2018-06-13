@@ -8,24 +8,23 @@ $$a^2 + b^2 = c^2$$
 </p>
 
 
-### Introduction
+### Project Learn RL with Pacman
+
+We are a group of fellows from the BootCamp DataScientest egear to get familiarize ourselves with **reinforcement learning**.  We have followed mainly the online ressource of [UC Berkeley's introductory artificial intelligence course CS 188](http://ai.berkeley.edu/home.html) with the support of the book [Reinforcement Learning: An introduction](http://incompleteideas.net/book/bookdraft2017nov5.pdf) of R. S. Sutton and A. G. Barto to achieved our goal: Create an agent to play _Pacman_!
+
+This website has the purpose to summarize our knowledge on **RL** and to show our progress to our other Fellows at the BootCamp.
+
+### Reinforcement Learning
 
 **Reinforcement learning (RL)** is a machine learning area to find the optimal way to achieve a goal. 
 **RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **RL** interacts with its environment through trial and error.
+
 It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. 
 
 There is many exemple of **RL** that range from managing an investment portfolio to ,and more importantly, playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
 
-### Project Learn RL with Pacman
-
-We are a group of fellows from the BootCamp DataScientest egear to learn a bit about **reinforcement learning** and we have followed mainly the online ressource of [UC Berkeley's introductory artificial intelligence course, CS 188](http://ai.berkeley.edu/home.html) to achieved our goal: Create an agent to play _Pacman_!
-
-This website has the purpose to summarize our knowledge on **RL** and to show our progress to our other Fellows at the BootCamp.
-
-### Reinforcement Learing
-
-As said previously, **RL** is about creating an agent that interact with its environment, gets feedback signals (observation and rewards) and makes decision to find the potimal way to achieve a Goal.
-In our case, we want Pacman to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman, our **RL agent**, can be ~~formalized~~ as a **Markov Decision Process (MDP)**.
+As said previously, **RL** is about creating an agent that interact with its environment, gets feedback signals (observations and rewards) and makes decision to find the potimal way to achieve a Goal.
+In our case, we want Pacman, our **RL agent**, to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman can be ~~formalized~~ as a **Markov Decision Process (MDP)**.
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="Principe"/>
