@@ -10,20 +10,37 @@ $$a^2 + b^2 = c^2$$
 
 ### Introduction
 
-**Reinforcement learning** is a machine learining area to find the optimal way to achieve a goal. 
-**Reinforcement learning** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **the reinforcement learning agent** interact with its environment through trial and error and received rewards signal.
+**Reinforcement learning (RL)** is a machine learning area to find the optimal way to achieve a goal. 
+**RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **RL** interacts with its environment through trial and error.
+It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. 
 
-It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. Sometimes, the **agents** makes a decision now and gets to see if it was a good decision or bad decision only many steps later. 
+There is many exemple of **RL** that range from managing an investment portfolio to ,and more importantly, playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
 
-There is many exemple of **reinforcement learning** that range from managing an investment portfolio to ,and more importantly, playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
+### Project Learn RL with Pacman
 
-The most fundamental quantity in RL is the rewards that is a scalar feedback signal, here name R_{t}.
+We are a group of fellows from the BootCamp DataScientest egear to learn a bit about **reinforcement learning** and we have followed mainly the online ressource of [UC Berkeley's introductory artificial intelligence course, CS 188](http://ai.berkeley.edu/home.html) to achieved our goal: Create an agent to play _Pacman_!
 
-![Principe](https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png "Principe")
+This website has the purpose to summarize our knowledge on **RL** and to show our progress to our other Fellows at the BootCamp.
 
+### Reinforcement Learing
+
+As said previously, **RL** is about creating an agent that interact with its environment, gets feedback signals (observation and rewards) and makes decision to find the potimal way to achieve a Goal.
+In our case, we want Pacman to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman, our **RL agent**, can be ~~formalized~~ as a **Markov Decision Process (MDP)**.
+
+<p align="center">
+  <img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="Principe"/>
+  </p>
+  
 From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
 
-### Markov Decision Process
+#### Markov Decision Process
+
+**MDP** encompass a liste of parameters:
+1. the possible position of Pacman in the gridworld, termed **states**
+2. a group of possible action, here _North_, _South_, _East_ and _West_
+3. a ~~set of probabilites that link starting position to other possible position~~, named **transition states**
+4. ~~**reward** associated with each transition~~
+5. ~~a **Discount factor :gamma:** that quantifies the difference in importance between immediate rewards and future rewards~~
 
 >Life is a Markov Decision Process.
 
@@ -39,6 +56,10 @@ Avantage/incovénients
 
 Intérêt du RN.
 
+### to add 
+
+The most fundamental quantity in RL is the rewards that is a scalar feedback signal, here name R_{t}.
+Sometimes, the **agents** makes a decision now and gets to see if it was a good decision or bad decision only many steps later. 
 
 ## Welcome to GitHub Pages
 
