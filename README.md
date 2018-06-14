@@ -1,7 +1,4 @@
 
-$$a^2 + b^2 = c^2$$
-
-
 ## AI Pacman (Reinforcement learning)
 <p align="center">
   <img src="http://ai.berkeley.edu/images/pacman_game.gif" alt="pacman_gif"/>
@@ -21,31 +18,41 @@ This website has the purpose to summarize our knowledge on **RL** and to show ou
 
 It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. 
 
-There is many exemple of **RL** that range from managing an investment portfolio to ,and more importantly, playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
+There is many exemple of **RL** that range from managing an investment portfolio to playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
 
 As said previously, **RL** is about creating an agent that interact with its environment, gets feedback signals (observations and rewards) and makes decision to find the potimal way to achieve a Goal.
-In our case, we want Pacman, our **RL agent**, to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman can be ~~formalized~~ as a **Markov Decision Process (MDP)**.
+In our case, we want Pacman, throught our **RL agent**, to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman can be visualized as a **Markov Decision Process (MDP)**.
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="Principe"/>
-  </p>
+ </p>
   
 From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
 
 #### Markov Decision Process
 
 **MDP** encompass a liste of parameters:
-1. the possible position of Pacman in the gridworld, termed **states**
-2. a group of possible action, here _North_, _South_, _East_ and _West_
-3. a ~~set of probabilites that link starting position to other possible position~~, named **transition states**
-4. ~~**reward** associated with each transition~~
-5. ~~a **Discount factor :gamma:** that quantifies the difference in importance between immediate rewards and future rewards~~
+1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
+2. the possible **action _a_** and its value **_Q_**, _North_, _South_, _East_ and _West_
+3. the probabilities that link starting to other position depending of the action taken, named **transition states probabilities _P_**
+4. the **rewards _r_**  associated with each transition
+5. the **gamma factor**, which is a discount factor to promote immediate or long-term rewards
 
->Life is a Markov Decision Process.
+The objective of the **agent** is to maximize the sum of rewards in long-term by taking the best action in each state.
 
 ### Q-Learning
 
-Avantage/ incovénient Q-Learning
+At the beginning, the **agent** has a representation of the environement that are the **states** and possible **actions** in those states but doesn't know the values of thoses parameters. It is during training that the **agent** will explore the environment and learn the value of each of those actions in each of those states. After it took an action from the **state s** and arrived to the **state s+1**, it evaluates the **state s** by updating the **action value _Q_** depending if it is a desirable state or not.
+
+The **_Q_ value** is updated following this equation :
+<p align="center">
+  <img src="https://cdn-images-1.medium.com/max/800/0*q8Dnp4guvDD230if." alt="q value update"/>
+ </p>
+
+Let's says that the **learning rate** is set to 1, which means that the old value is replaced by the updated value, and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to the sum of the **reward** obtained and the estimated future rewards.
+After a number of iteration (number of times the agent try the games), there is an estimated value for each state-action pairs, which will converge eventually to the optimal value after a certain number of iterations. The **agent** will select which action to take according to a **policy**, for example a **greedy policy** that will always to the action with the highest **_Q_ value**.
+
+Finally, all the **state-action values** are stored in a table of size **N** * **M**, where **N** is the number of possible states and **M** is the number of possible actions. To get the optimal policy, which get the maximum rewards, the **agent** needs to perform a lot of iteration process. This is fine for small gridworld but when the **agent** evolves in a medium or large gridworld, it needs a huge numbers of iteration taking a long time to train.
 
 ### Approximate Q-Learning
 
