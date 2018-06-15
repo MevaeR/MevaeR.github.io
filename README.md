@@ -14,31 +14,15 @@ This website has the purpose to summarize our knowledge on **RL** and to show ou
 ### Reinforcement Learning
 
 **Reinforcement learning (RL)** is a machine learning area to find the optimal way to achieve a goal. 
-**RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **RL** interacts with its environment through trial and error.
+**RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **the RL agent** interacts with its environment, through trial and error, that can be formalized as a **Markov Decision Process (MDP)**. **MDP** is caracterized mostly by the possible postions of the agent termed state (**s**), the possible action (**a**) and the rewards (**r**) associated with each transition.
+It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. The objective of the **agent** is to maximize the sum of rewards in long-term by taking the best action in each state.
 
-It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. 
-
-There is many exemple of **RL** that range from managing an investment portfolio to playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
-
-As said previously, **RL** is about creating an agent that interact with its environment, gets feedback signals (observations and rewards) and makes decision to find the potimal way to achieve a Goal.
-In our case, we want Pacman, throught our **RL agent**, to eat all the dots and avoid to be caught by the ghosts. The decision making of Pacman can be visualized as a **Markov Decision Process (MDP)**.
-
+In our case, we want our Pacman agent to eat all the dots and avoid to be caught by the ghosts.
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="Principe"/>
  </p>
   
 From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
-
-#### Markov Decision Process
-
-**MDP** encompass a liste of parameters:
-1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
-2. the possible **action _a_** and its value **_Q_**, _North_, _South_, _East_ and _West_
-3. the probabilities that link starting to other position depending of the action taken, named **transition states probabilities _P_**
-4. the **rewards _r_**  associated with each transition
-5. the **gamma factor**, which is a discount factor to promote immediate or long-term rewards
-
-The objective of the **agent** is to maximize the sum of rewards in long-term by taking the best action in each state.
 
 ### Q-Learning
 
@@ -66,6 +50,16 @@ Intérêt du RN.
 
 The most fundamental quantity in RL is the rewards that is a scalar feedback signal, here name R_{t}.
 Sometimes, the **agents** makes a decision now and gets to see if it was a good decision or bad decision only many steps later. 
+
+There is many exemple of **RL** that range from managing an investment portfolio to playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
+
+
+**MDP** encompass a liste of parameters:
+1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
+2. the possible **action _a_** and its value **_Q_**, _North_, _South_, _East_ and _West_
+3. the probabilities that link starting to other position depending of the action taken, named **transition states probabilities _P_**
+4. the **rewards _r_**  associated with each transition
+5. the **gamma factor**, which is a discount factor to promote immediate or long-term rewards
 
 ## Welcome to GitHub Pages
 
