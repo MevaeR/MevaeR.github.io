@@ -42,7 +42,11 @@ In **Q-learning**, we affect a value for each **action** given a particular **st
   <img src="https://cdn-images-1.medium.com/max/800/0*q8Dnp4guvDD230if." alt="q value update"/>
  </p>
 
-Let's says that the **learning rate** is set to 1 (meaning that the old value is replaced by the updated value) and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to sum of the **reward** obtained and the estimated future rewards. In Q-learning, the estimated future rewards is the highest **Q value** given next state **S+1**. After a number of iteration (number of times the agent try the games), there is an estimated value for each state-action pairs, which will converge eventually to the optimal value after a certain number of iterations.
+Let's says that the **learning rate** is set to 1 (meaning that the old value is replaced by the updated value) and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to sum of the **reward** obtained and the estimated future rewards. In Q-learning, the estimated future rewards is the highest **Q value** given next state **S+1**.
+<p align="center">
+  <img src="https://github.com/MevaeR/MevaeR.github.io/blob/MevaeR-patch-2/exemple_q-learning.png" alt="q value update"/>
+ </p>
+After a number of iteration (number of times the agent try the games), there is an estimated value for each state-action pairs, which will converge eventually to the optimal value after a certain number of iterations.
 
 After evaluating the **state**, the **agent** will select which action to take according to a **Epsilon-greedy policy** that will take the action with the highest **Q value** with a probability equal to **Epsilon** to take a random action. The **Epsilon greedy policiy** allows the **agent** the possibility to explore the environement even if it finds a good spot of rewards, avoiding the **agent** to get stuck in the maze and prevent future possible rewards.
 
