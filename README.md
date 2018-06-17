@@ -1,5 +1,5 @@
 
-## AI Pacman (Reinforcement learning)
+## AI Pacman :video_game: :space_invader: :trophy: (Reinforcement learning)
 <p align="center">
   <img src="http://ai.berkeley.edu/images/pacman_game.gif" alt="pacman_gif"/>
 </p>
@@ -13,46 +13,46 @@ This website has the purpose to summarize our knowledge on **RL** and to show ou
 
 ### Reinforcement Learning
 
-**Reinforcement learning (RL)** is a machine learning area to find the optimal way to achieve a goal. 
-**RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the system the right action to take. In order to perform its tasks, **the RL agent** interacts with its environment, through trial and error, that can be formalized as a **Markov Decision Process (MDP)**. **MDP** is caracterized mostly by the possible postions of the agent termed state (**s**), the possible action (**a**) and the rewards (**r**) associated with each transition.
-It is a sequential decision making process. One step after an other, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those rewards to obtain the best possible outcome. The objective of the **agent** is to maximize the sum of rewards in long-term by taking the best action in each state.
+**Reinforcement learning (RL)** is a machine learning area to find the optimal way to achieve a goal. **RL** is different from supervised and unsupervised machine learning because there is no "supervisor" to tell the **agent** the right action to take.
+In general, **the RL agent** doesn't know its environement and have to explore it. Thus, the **agent** gets to make decision, picks action, see how much rewards it gets and optimizes those decision by maximizing the sum of rewards in long-term.
 
-In our case, we want our Pacman agent to eat all the dots and avoid to be caught by the ghosts.
+The interaction between the **agent** and its environment can be formalized as a **Markov Decision Process (MDP)**. **MDP** is caracterized principally by three paramaters:
+- the **state** (**S**) of the syteme
+- the possible action **A** in those **state**
+- the rewards (**R**) associated with each transition from the starting state to the next state given a specific action **A**.
+
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*Z2yMvuQ1-t5Ol1ac_W4dOQ.png" alt="Principe"/>
  </p>
   
-From [Medium](https://medium.com/@m.alzantot/deep-reinforcement-learning-demystified-episode-0-2198c05a6124/)
+In our case, we want our Pacman agent to get the maximum point possible in the different gridworld according to the following rules:
+- +10 when it eats a dots
+- +200 when it eats a ghost after getting a capsule
+- +500 when it eats every dots
+- +1 at each action
+- -500 when it gets eaten by a ghost
+
+There is many different algorithm avalaible in order to create an agent but here i will be focusing on **Q-learning** and **approximate Q-learning**.
 
 ### Q-Learning
 
-At the beginning, the **agent** has a representation of the environement that are the **states** and possible **actions** in those states but doesn't know the values of thoses parameters. It is during training that the **agent** will explore the environment and learn the value of each of those actions in each of those states. After it took an action from the **state s** and arrived to the **state s+1**, it evaluates the **state s** by updating the **action value _Q_** depending if it is a desirable state or not.
+In **Q-learning**, we affect a value for each **action** given a particular **state** with the idea to see how good was to take the action. At the beginning, the **agent** has a representation of the environment that are the **states** and the possible **actions** in those states but doesn't know the values of thoses parameters. It is during training that the **agent** will explore the environment and learn the value of each of those actions in each of those states. After it took an action from the **state S** and arrived to the **state S+1**, it evaluates the **state S** by updating the **action value Q** using this equation :
 
-The **_Q_ value** is updated following this equation :
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/800/0*q8Dnp4guvDD230if." alt="q value update"/>
  </p>
 
-Let's says that the **learning rate** is set to 1, which means that the old value is replaced by the updated value, and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to the sum of the **reward** obtained and the estimated future rewards.
-After a number of iteration (number of times the agent try the games), there is an estimated value for each state-action pairs, which will converge eventually to the optimal value after a certain number of iterations. The **agent** will select which action to take according to a **policy**, for example a **greedy policy** that will always to the action with the highest **_Q_ value**.
+Let's says that the **learning rate** is set to 1 (meaning that the old value is replaced by the updated value) and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to sum of the **reward** obtained and the estimated future rewards. In Q-learning, the estimated future rewards is the highest **Q value** given next state **S+1**. After a number of iteration (number of times the agent try the games), there is an estimated value for each state-action pairs, which will converge eventually to the optimal value after a certain number of iterations.
 
-Finally, all the **state-action values** are stored in a table of size **N** * **M**, where **N** is the number of possible states and **M** is the number of possible actions. To get the optimal policy, which get the maximum rewards, the **agent** needs to perform a lot of iteration process. This is fine for small gridworld but when the **agent** evolves in a medium or large gridworld, it needs a huge numbers of iteration taking a long time to train.
+After evaluating the **state**, the **agent** will select which action to take according to a **Epsilon-greedy policy** that will take the action with the highest **Q value** with a probability equal to **Epsilon** to take a random action. The **Epsilon greedy policiy** allows the **agent** the possibility to explore the environement even if it finds a good spot of rewards, avoiding the **agent** to get stuck in the maze and prevent future possible rewards.
+
+Finally, all the **Q values** are stored in a table of size **N** * **M**, where **N** is the number of possible states and **M** is the number of possible actions. To get the optimal policy, which get the maximum rewards, the **agent** needs to perform a lot of iteration process. This is fine for small gridworld but when the **agent** evolves in a medium or large gridworld, it needs a huge numbers of iteration taking a long time to train. An efficient way to train the **agent** in an environment with very large number of state is to use **Approximate Q-Learning**.
 
 ### Approximate Q-Learning
 
 Avantage/incovénients
 
-### Application Réseaux de neurones
-
-Intérêt du RN.
-
-### to add 
-
-The most fundamental quantity in RL is the rewards that is a scalar feedback signal, here name R_{t}.
-Sometimes, the **agents** makes a decision now and gets to see if it was a good decision or bad decision only many steps later. 
-
-There is many exemple of **RL** that range from managing an investment portfolio to playing video/board games better than humans such as Atari games. :video_game: :space_invader: :trophy:
-
+### PACAMN
 
 **MDP** encompass a liste of parameters:
 1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
