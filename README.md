@@ -45,6 +45,9 @@ In **Q-learning**, we affect a value for each **action** given a particular **st
 Let's says that the **learning rate** is set to 1 (meaning that the old value is replaced by the updated value) and that the **discount factor** is set to 1 (no discount). So the updated value is equivalent to sum of the **reward** obtained and the estimated future rewards. In Q-learning, the estimated future rewards is the highest **Q value** given next state **S+1**.
 
 `python gridworld.py -a q -k 5 -m`
+
+![Image](https://github.com/MevaeR/MevaeR.github.io/blob/MevaeR-patch-2/exemple_q-learning.png)
+
 <p align="center">
   <img src="https://github.com/MevaeR/MevaeR.github.io/blob/MevaeR-patch-2/exemple_q-learning.png" alt="q value update"/>
  </p>
