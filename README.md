@@ -54,10 +54,13 @@ Finally, all the **Q values** are stored in a table of size **N** * **M**, where
 
 ### Approximate Q-Learning
 
-Avantage/incovénients
+One way to reduce the number of iteration is to adress **Q value** from known **state-action** to other similar **state-action** so it reduces drastically the number the **agent** has to play. This is performed by adding features that sorts out the important informations. In Pacman, for example, the feature _#-of ghost one step away_, _eats-food_ and _closest food_ are enough to reduce the number of training iteration from over 24000 to 50.
+
+The training consists in computing of **Q value** from a **linear combination of features f(i)** given by with a **weight-factor w**
+
+
 
 ### PACAMN
-
 **MDP** encompass a liste of parameters:
 1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
 2. the possible **action _a_** and its value **_Q_**, _North_, _South_, _East_ and _West_
