@@ -56,52 +56,12 @@ Finally, all the **Q values** are stored in a table of size **N** * **M**, where
 
 One way to reduce the number of iteration is to adress **Q value** from known **state-action** to other similar **state-action** so it reduces drastically the number the **agent** has to play. This is performed by adding features that sorts out the important informations. In Pacman, for example, the feature _#-of ghost one step away_, _eats-food_ and _closest food_ are enough to reduce the number of training iteration from over 24000 to 50.
 
-The training consists in computing of **Q value** from a **linear combination of features f(i)** given by with a **weight-factor w**
-
-
-
-### PACAMN
-**MDP** encompass a liste of parameters:
-1. the possible position of Pacman in the gridworld, termed **states** and its value **_s_**
-2. the possible **action _a_** and its value **_Q_**, _North_, _South_, _East_ and _West_
-3. the probabilities that link starting to other position depending of the action taken, named **transition states probabilities _P_**
-4. the **rewards _r_**  associated with each transition
-5. the **gamma factor**, which is a discount factor to promote immediate or long-term rewards
-
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/MevaeR/MevaeR.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MevaeR/MevaeR.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The training consists in computing of **Q value** from a **linear combination of features f(i)** given by with a **weight-factor w**.
+<p align="center">
+  <img src="https://github.com/MevaeR/MevaeR.github.io/blob/MevaeR-patch-2/Q-Linear%20comb.png?raw=true" alt="Q linear combination features"/>
+ </p>
+ 
+Then, the agent updates the **the weight value**:
+<p align="center">
+  <img src="https://github.com/MevaeR/MevaeR.github.io/blob/MevaeR-patch-2/update%20w.png?raw=true" alt="update weight"/>
+ </p>
